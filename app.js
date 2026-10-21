@@ -11,6 +11,12 @@ $('.menu-toggle').addEventListener('click', () => {
   $('.menu-toggle').setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
 });
 document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => { $('nav').classList.remove('open'); $('.menu-toggle').setAttribute('aria-expanded', 'false'); }));
+const engineerNotes = {
+  'creative-room': 'Avec notre ingénieur du son ou avec le vôtre.',
+  'dubbing': 'Accompagnement adapté aux productions professionnelles comme aux sessions de formation.',
+  'live-rec': 'Disponible exclusivement avec notre ingénieur du son interne.'
+};
+$('#session').addEventListener('change', event => { $('#engineer-note').textContent = engineerNotes[event.target.value]; });
 $('#year').textContent = new Date().getFullYear();
 if (config.name) {
   document.title = `${config.name} — Faites place à votre son.`;

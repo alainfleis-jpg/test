@@ -16,7 +16,7 @@ nav{display:flex;align-items:center;gap:34px;font-size:12px}
 .nav-book span{margin-left:25px}
 .menu-toggle{display:none}
 .hero{position:relative;min-height:660px;height:calc(100svh - 100px);max-height:900px;background:#171815;color:#fff;overflow:hidden}
-.hero-photo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,16,14,.86),rgba(13,16,14,.25)),linear-gradient(0deg,rgba(0,0,0,.65),transparent 45%),url('assets/studio.svg') center 55%/cover}
+.hero-photo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,16,14,.86),rgba(13,16,14,.25)),linear-gradient(0deg,rgba(0,0,0,.65),transparent 45%),url('assets/studio-regie.webp') center 64%/cover}
 .hero-content{position:relative;padding:85px 7% 120px;max-width:1000px}
 .eyebrow,.section-label{font-size:10px;letter-spacing:2px;font-weight:600}
 .eyebrow{display:flex;gap:10px;align-items:center}
@@ -183,3 +183,13 @@ footer>span:last-child{width:100%;font-size:9px}
   .activity-grid h3{font-size:24px}
   .activity-grid p{font-size:12px}
 }
+
+/* Photographies du studio */
+.gallery{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:35px}
+.gallery figure:nth-child(2){padding-top:0}
+.gallery img,.gallery figure:nth-child(2) img{height:420px;filter:none;object-position:center 58%}
+.gallery figure:nth-child(2) img{object-position:center 42%}
+.gallery figure:nth-child(4) img{object-position:center 48%}
+.gallery a{display:block;border-radius:3px;overflow:hidden}
+@media(max-width:800px){.gallery img,.gallery figure:nth-child(2) img{height:340px}}
+@media(max-width:560px){.gallery{grid-template-columns:1fr}.gallery img,.gallery figure:nth-child(2) img{height:auto;max-height:520px;object-fit:cover}.hero-photo{background-position:center 64%}}

@@ -20,7 +20,6 @@ $('#session').addEventListener('change', event => { $('#engineer-note').textCont
 $('#year').textContent = new Date().getFullYear();
 if (config.name) {
   document.title = `${config.name} — Faites place à votre son.`;
-  document.querySelectorAll('.brand').forEach(el => { el.firstChild.textContent = config.name.replace(/^Studio\s+/i, '').toLowerCase(); });
   $('footer>span:last-child').replaceChildren(document.createTextNode(`© ${new Date().getFullYear()} ${config.name}`));
 }
 $('#booking-form').addEventListener('submit', e => {
